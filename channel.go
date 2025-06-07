@@ -233,6 +233,9 @@ type ChannelCreateRequest struct {
 	// Formats is the comma-separated list of valid codecs to allow for the new channel, in the case that
 	// the Originator is not specified
 	Formats string `json:"formats,omitempty"`
+
+	// Variables describes the set of channel variables to apply to the new channel.  It is optional.
+	Variables map[string]string `json:"variables,omitempty"`
 }
 
 // SnoopOptions enumerates the non-required arguments for the snoop operation
